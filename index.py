@@ -21,4 +21,8 @@ from sklearn.preprocessing import OneHotEncoder
 ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [0])], remainder='passthrough')
 
 X = np.array(ct.fit_transform(X))
-print(X)
+# print(X)
+
+from sklearn.preprocessing import LabelEncoder
+le=LabelEncoder()
+y=le.fit_transform(y)
